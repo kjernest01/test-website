@@ -8,18 +8,32 @@ const Work = () => {
     return (
         <div id='work' className="work">
             <div className="work-title">
-                <h1>My latest work</h1>
+                <h1>Work Experience</h1>
                 <img src={theme_pattern} alt="" />
             </div>
+
             <div className="work-container">
-                {work_data.map((work, index) => {
-                    return <img key={index} src={work.w_img} alt=""></img>
-                })}
+                {work_data.map((work, index) => (
+                    <div className="work-item" key={index}>
+                        <img src={work.w_img} alt="" />
+                        <div className="work-description">
+                            <div className="work-description-item">
+                                <h1>Title: {work.w_name}</h1>
+                                <h1>Country: {work.w_country}</h1>
+                            </div>
+
+                            <div className="work-description-item">
+                                <h1>Description:</h1>
+                                <h2>{work.w_desc}</h2>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
-            <div className="work-showmore">
+            {/* <div className="work-showmore">
                 <p>Show More</p>
                 <img src={arrow_icon} alt="" />
-            </div>
+            </div> */}
         </div>
     )
 }

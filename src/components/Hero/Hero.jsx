@@ -8,10 +8,12 @@ const Hero = () => {
         <div id='home' className="hero">
             <img src={profile_img} alt="profile_img"></img>
             <h1><span>Vikram Ratan's</span> Portfolio</h1>
-            <p>I'm a hardworker and I have done a lot of projects</p>
+            <p>Data Analyst ~ Data Engineer ~ Business Analyst</p>
             <div className="hero-action">
                 <AnchorLink className="anchor-link" offset={50} href='#contact'><div className="hero-connect">Connect with me!</div></AnchorLink>
-                <div className="hero-resume">My Resume</div>
+                <div className="hero-resume">
+                    <a href="./src/assets/resumes/Vikram_Ratan_Resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a>
+                </div>
             </div>
         </div >
         // <></>

@@ -26,24 +26,73 @@
 
 .work-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
 
-.work-container img {
-    box-sizing: border-box;
+.work-item {
+    position: relative;
     width: 419px;
     height: 280px;
-    transform: 0.3s;
-    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden; /* Ensure the description doesn't overflow the image */
 }
 
-.work-container img:hover {
-    transform: scale(1.10);
-    border: 4px solid #FF00FF;
+.work-item img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    cursor: pointer;
     border-radius: 10px;
-    transition: 0.3s;
+    transition: transform 0.3s ease;
+    z-index: 1;
 }
+
+.work-item:hover img {
+    transform: scale(1.10);
+}
+
+/* Fade-in description */
+.work-description {
+    position: absolute;
+    /* margin-top: 0; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1); /* Semi-transparent overlay */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    /* color: white; */
+    /* font-size: 20px; */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    /* z-index: 2; */
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.work-description h1,h2 {
+    font-weight: 50;
+    font-size: small;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.work-description h1 {
+    font-size: medium;
+    font-weight: 300;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.work-item:hover .work-description {
+    opacity: 1;
+}
+
 
 .work-showmore {
     display: flex;
