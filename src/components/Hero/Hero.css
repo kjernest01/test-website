@@ -1,104 +1,113 @@
+/* Hero Section Layout */
 .hero {
     display: flex;
     align-items: center;
-    flex-direction: column;
     gap: 35px;
+    /* background-color: aqua; */
 }
 
-.hero img {
-    margin-top: 150px;
+.anchor-link {
+    text-decoration: none;
+}
+
+.hero-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .hero h1 {
-    text-align: center;
-    width: 70%;
     font-size: 90px;
     font-weight: 600;
-}
-
-.hero h1 span {
-    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-    width: 50%;
     text-align: center;
-    font-size: 24px;
-    line-height: 40px;
+    white-space: nowrap;
 }
 
+/* Hero Image */
+.hero-img img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Action Buttons */
 .hero-action {
     display: flex;
-    align-items: center;
     gap: 25px;
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 50px;
 }
 
-.hero-connect {
+.hero-connect, .hero-resume {
     padding: 25px 45px;
     border-radius: 50px;
-    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.hero-connect {
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .hero-resume {
     padding: 25px 75px;
-    border-radius: 50px;
-    border: 2px solid #FFF;
-    cursor: pointer;
+    border: 2px solid #fff;
+    color: var(--neutral-color);
+    background-color: transparent;
+    text-decoration: none;
 }
 
 .hero-resume a {
     text-decoration: none;
-    color: white;
+    color: inherit;
 }
 
+/* Button Hover Effects */
 .hero-connect:hover {
-    border: 2px solid white;
+    background-color: var(--background-color);
 }
 
 .hero-resume:hover {
-    border-color: #B415FF;
+    border-color: var(--secondary-color);
 }
 
-@media(max-width:768px) {
-    .hero img {
-        margin-top: 120px;
-        width: 260px;
-    }
+/* Scroll Arrow and Text */
+.hero-scroll {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: white;
+    font-size: 16px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
 
-    .hero h1 {
-        margin-top: 50px;
-        width: 90%;
-        font-size: 50px;
-    }
+.hero-scroll p {
+    margin: 0;
+    font-size: 25px;
+}
 
-    .hero p {
-        width: 60%;
-        font-size: 18px;
-        line-height: 32px;
-        margin: 10px 0px;
-    }
+.hero-scroll img {
+    width: 30px;
+    height: auto;
+    animation: bounce 1.5s infinite;
+    filter: brightness(90%);
+}
 
-    .hero-action {
-        gap: 16px;
-        font-size: 18px;
-        font-weight: 500;
-        margin-bottom: 50px;
-    }
+/* Hover Effects for Scroll */
+.hero-scroll:hover {
+    opacity: 0.8;
+}
 
-    .hero-connect {
-        padding: 20px 30px;
-        border-radius: 40px;
-    }
-
-    .hero-resume {
-        padding: 20px 50px;
-        border-radius: 40px;
-    }
+/* Bounce Animation for Arrow */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
 }

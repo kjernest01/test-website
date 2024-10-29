@@ -1,0 +1,94 @@
+/* General Styling for Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    position: relative;
+    height: 100vh;
+}
+
+/* Divider Styling */
+.divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Hero Information Section */
+.hero-information h1 {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.hero-action {
+    display: flex;
+    gap: 20px;
+}
+
+/* Button Styling */
+.hero-connect, .hero-resume a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: var(--button-bg);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero-connect:hover, .hero-resume a:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Hero Scroll Section */
+.hero-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.hero-scroll p {
+    margin: 0;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Down Arrow Styling */
+.hero-scroll img {
+    width: 24px;
+    height: auto;
+    animation: bounce 1.5s infinite;
+    filter: brightness(90%);
+}
+
+.hero-scroll:hover {
+    opacity: 1;
+}
+
+/* Bounce Animation for Arrow */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+/* Hero Image Styling */
+.hero-img img {
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 30px;
+}

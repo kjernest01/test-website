@@ -12,7 +12,7 @@ const Projects = () => {
         <div id='projects' className="projects">
             <div className="projects-title">
                 <h1>Projects</h1>
-                <img src={theme_pattern} alt="" />
+                {/* <img src={theme_pattern} alt="" /> */}
             </div>
             <div className="projects-container">
                 {projects_data.map((project, index) => {

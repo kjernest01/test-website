@@ -1,4 +1,77 @@
+/* General Styling for Footer Section */
 .footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Top Section */
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-top-left h1 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.footer-top-left p {
+    font-size: 16px;
+    color: var(--neutral-color);
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Divider Line */
+.footer hr {
+    border: 0.5px solid var(--border-color);
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-bottom-left {
+    font-size: 14px;
+    color: var(--neutral-color);
+}
+
+.footer-bottom-right {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-bottom-right p {
+    font-size: 14px;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-right p:hover {
+    color: var(--primary-dark);
+}
+
+.footer-keys {
+    display: flex;
+    gap: 30px;
+}
+
+/* .footer {
     margin: 50px 170px;
     display: flex;
     flex-direction: column;
@@ -91,4 +164,4 @@
         flex-direction: column-reverse;
         margin-bottom: 50px;
     }
-}
+} */

@@ -1,4 +1,84 @@
+/* General Styling for About Section */
 .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    /* background-color: var(--neutral-color); Background similar to hero section */
+    color: var(--text-color);
+    border-radius: 10px;
+    /* margin-top: 50px; */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+}
+
+/* About Title Styling */
+.about-title h1 {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/* Layout for About Sections */
+.about-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Paragraph Styling */
+.about-paragraph p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--background-color); /* Darker text color for contrast */
+    margin-bottom: 20px;
+}
+
+/* Skills Section - Grid and Skill Boxes */
+.about-skills {
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1f r)); */
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-skill {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 25%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-skill:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-skill h1 {
+    font-size: 20px;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+.about-skill h1 span {
+    color: var(--primary-color);
+}
+
+.about-skill p {
+    font-size: 16px;
+    color: var(--background-color);
+    margin: 5px 0;
+}
+
+/* .about {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,4 +265,4 @@
         text-align: center;
         font-size: 16px;
     }
-}
+} */

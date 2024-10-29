@@ -8,12 +8,12 @@ const About = () => {
         <div id='about' className="about">
             <div className="about-title">
                 <h1>About me</h1>
-                <img src={theme_pattern} alt="" />
+                {/* <img src={theme_pattern} alt="" /> */}
             </div>
             <div className="about-sections">
-                <div className="about-left">
+                {/* <div className="about-left">
                     <img src={profile_img} alt="" />
-                </div>
+                </div> */}
                 <div className="about-right">
                     <div className="about-paragraph">
                         <p>Hey There! I’m a Data Analyst and currently pursuing a master’s in Business Analytics and Artificial Intelligence at the University of Texas at Dallas. With over three years of experience as both a Business and Data Analyst, I specialize in turning complex data into actionable insights and building visual dashboards that drive stakeholder decision-making.
@@ -24,63 +24,53 @@ const About = () => {
                     <div className="about-skills">
 
                         <div className="about-skill">
-                            <h1><span>Cloud Data Warehousing & Computing</span></h1>
-                            <p>AWS</p>
-                            <p>Snowflake</p>
-                            {/*<hr style={{ width: "60%" }}></hr>*/}
+                            <h1><span>AWS</span></h1>
                         </div>
 
                         <div className="about-skill">
-                            <h1><span>Data Visualization</span></h1>
-                            <p>Tableau</p>
-                            <p>Power BI</p>
-                            <p>Excel</p>
-                            {/*<hr style={{ width: "60%" }}></hr>*/}
+                            <h1><span>SnowFlake</span></h1>
                         </div>
 
                         <div className="about-skill">
-                            <h1><span>Programming & Data Manipulation</span></h1>
-                            <p>Python</p>
-                            <p>SQL</p>
-                            {/*<hr style={{ width: "60%" }}></hr>*/}
+                            <h1><span>Tableau</span></h1>
                         </div>
 
                         <div className="about-skill">
-                            <h1><span>Machine Learning & AI</span></h1>
-                            <p>Tensorflow</p>
-                            <p>Sci-kit Learn</p>
-                            {/*<hr style={{ width: "60%" }}></hr>*/}
+                            <h1><span>Power BI</span></h1>
                         </div>
 
                         <div className="about-skill">
-                            <h1><span>Database Management</span></h1>
-                            <p>MySQL</p>
-                            <p>PostgreSQL</p>
-                            {/*<hr style={{ width: "60%" }}></hr>*/}
+                            <h1><span>Excel</span></h1>
+                        </div>
+
+                        <div className="about-skill">
+                            <h1><span>Python</span></h1>
+                        </div>
+
+                        <div className="about-skill">
+                            <h1><span>SQL</span></h1>
+                        </div>
+
+                        <div className="about-skill">
+                            <h1><span>Tensorflow</span></h1>
+                        </div>
+
+                        <div className="about-skill">
+                            <h1><span>Sci-kit Learn</span></h1>
+                        </div>
+
+                        <div className="about-skill">
+                            <h1><span>MySQL</span></h1>
+                        </div>
+
+                        <div className="about-skill">
+                            <h1><span>PostgreSQL</span></h1>
                         </div>
 
                     </div>
                 </div>
 
             </div>
-
-            {/* <div className="about-achievements">
-                <div className="about-achievement">
-                    <h1>10+</h1>
-                    <p>YEARS OF EXPERIENCE</p>
-                </div>
-                <hr />
-                <div className="about-achievement">
-                    <h1>90+</h1>
-                    <p>PROJECTS COMPLETED</p>
-                </div>
-                <hr />
-                <div className="about-achievement">
-                    <h1>15+</h1>
-                    <p>HAPPY CLIENTS</p>
-                </div>
-            </div> */}
-
         </div>
     )
 }

@@ -1,4 +1,126 @@
+/* General Styling for Contact Section */
 .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    /* background-color: var(--neutral-color); */
+    color: var(--text-color);
+    border-radius: 10px;
+    margin-top: 50px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+    transition: border 0.3s ease;
+}
+
+.contact:hover {
+    border: 5px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Title Styling */
+.contact-title h1 {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/* Contact Section Layout */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.contact-left,
+.contact-right {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Left - Information Section */
+.contact-left h1 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.contact-left p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--background-color);
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: var(--background-color);
+}
+
+/* Contact Form Styling */
+.contact-right label {
+    display: block;
+    font-size: 16px;
+    color: var(--primary-dark);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    font-size: 16px;
+    color: var(--background-color);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 15px;
+}
+
+.contact-right .contact-submit {
+    padding: 12px 20px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-right .contact-submit:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .contact-section {
+        flex-direction: row;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex: 1;
+    }
+}
+
+/* .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,4 +297,4 @@
         font-size: 20px;
         padding: 15px 40px;
     }
-}
+} */

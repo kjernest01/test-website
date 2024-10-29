@@ -1,223 +1,67 @@
+/* General Styling for Education Section */
 .education {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
-}
-
-.education-title {
-    position: relative;
-}
-
-.education-title h1 {
-    padding: 0px 30px;
-    font-size: 80px;
-    font-weight: 600;
-}
-
-.education-title img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-}
-
-.education-format {
-    width: 100%;
-    /* align-items: center; */
     text-align: center;
-    /* Center align text and image */
-    margin: 20px;
-    /* Add some margin around the education blocks */
-    display: flex;
-    flex-direction: row;
-    gap: 3%;
-    /* background-color: #B415FF; */
-    /* height: fit-content; */
-    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    padding: 50px 20px;
+    /* background-color: var(--neutral-color); */
+    color: var(--text-color);
     border-radius: 10px;
+    margin-top: 50px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9); */
 }
 
-.education-format img {
-    /* background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%); */
-    max-width: 150px;
-    height: 150px;
-    margin: 5px;
-    border-radius: 5px;
+/* Education Title Styling */
+.education-title h1 {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
 }
 
-.education-info {
+/* Layout for Individual Education Items */
+.education-item-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
-    /* background-color: aqua; */
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    height: 100%;
-    align-content: center;
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    max-width: 800px;
 }
 
-.education-info h2 {
-    font-size: 60px;
+.education-item {
+    background-color: white;
+    padding: 30px; /* Increased padding for spacing */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.education-info h3,
-h4 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-decoration: none;
-    font-size: large;
+.education-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* .education-section {
-    display: flex;
-    gap: 150px;
-}
-
-.education-left {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.education-left h1 {
-    font-size: 80px;
-    font-weight: 700;
-    background: linear-gradient(270deg, #DF8908 80%, #B415FF 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.education-left p {
-    max-width: 550px;
-    color: #D8D8D8;
-    font-size: 20px;
-    line-height: 35px;
-
-}
-
-.education-details {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    color: #D8D8D8;
-    font-size: 22px;
-}
-
-.education-detail {
+/* Education Format Styling */
+.education-format {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.education-right {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 30px;
+/* Increased logo size for readability */
+.education-format img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
 }
 
-.education-right label {
-    color: #D8D8D8;
+.education-info h2 {
     font-size: 22px;
-    font-weight: 500;
+    color: var(--heading-color);
+    margin-bottom: 5px;
 }
 
-.education-right input {
-    border: none;
-    width: 700px;
-    height: 78px;
-    padding-left: 20px;
-    border-radius: 4px;
-    background: #32323C;
-    color: #A0A0A0;
-    font-family: Outfit;
-    font-size: 20px;
+.education-info h3 {
+    font-size: 18px;
+    color: var(--background-color);
 }
-
-.education-right textarea {
-    width: 650px;
-    border: none;
-    padding: 25px;
-    border-radius: 4px;
-    background: #32323C;
-    color: #A0A0A0;
-    font-family: Outfit;
-    font-size: 20px;
-}
-
-.education-submit {
-    border: none;
-    color: white;
-    border-radius: 50px;
-    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
-    font-size: 22px;
-    padding: 20px 60px;
-    margin-bottom: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.education-submit:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-
-@media(max-width:768px) {
-    .education {
-        gap: 50px;
-        margin: 50px 70px;
-        align-items: start;
-    }
-
-    .education-title h1 {
-        padding: 0;
-        font-size: 50px;
-        font-weight: 600;
-    }
-
-    .education-title img {
-        width: 130px;
-        margin-right: -20px;
-    }
-
-    .education-section {
-        flex-direction: column;
-    }
-
-    .education-left h1 {
-        font-size: 54px;
-    }
-
-    .education-left p {
-        font-size: 18px;
-    }
-
-    .education-details {
-        gap: 20px;
-    }
-
-    .education-detail img {
-        width: 25px;
-    }
-
-    .education-right label {
-        font-size: 20px;
-    }
-
-    .education-right input {
-        width: 100%;
-        font-size: 20px;
-    }
-
-    .education-right textarea {
-        width: 95%;
-        font-size: 20px;
-    }
-
-    .education-submit {
-        font-size: 20px;
-        padding: 15px 40px;
-    }
-} */

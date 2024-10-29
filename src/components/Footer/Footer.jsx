@@ -10,15 +10,18 @@ const Footer = () => {
                 <div className="footer-top-left">
                     <h1>Vikram Ratan</h1>
                     {/* <img src={footer_logo} alt="" /> */}
-                    <p>Data Analyst</p><p>Data Engineer</p><p>Business Analyst</p>
+                    <div className="footer-keys">
+                        <p>Data Analyst</p><p>Data Engineer</p><p>Business Analyst</p>
+                    </div>
+
                 </div>
-                <div className="footer-top-right">
+                {/* <div className="footer-top-right">
                     <div className="footer-email-input">
                         <img src={user_icon} alt="" />
                         <input type="email" placeholder="Enter your email" />
                     </div>
                     <div className="footer-subscribe">Subscribe</div>
-                </div>
+                </div> */}
             </div>
             <hr />
             <div className="footer-bottom">
@@ -26,7 +29,6 @@ const Footer = () => {
                 <div className="footer-bottom-right">
                     <p>Terms of Services</p>
                     <p>Privacy Policy</p>
-                    <p>Connect with me</p>
                 </div>
             </div>
         </div>

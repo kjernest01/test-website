@@ -9,13 +9,13 @@ const Work = () => {
         <div id='work' className="work">
             <div className="work-title">
                 <h1>Work Experience</h1>
-                <img src={theme_pattern} alt="" />
+                {/* <img src={theme_pattern} alt="" /> */}
             </div>
 
             <div className="work-container">
                 {work_data.map((work, index) => (
                     <div className="work-item" key={index}>
-                        <img src={work.w_img} alt="" />
+                        {/* <img src={work.w_img} alt="" /> */}
                         <div className="work-description">
                             <div className="work-description-item">
                                 <h1>Title: {work.w_name}</h1>
@@ -30,10 +30,6 @@ const Work = () => {
                     </div>
                 ))}
             </div>
-            {/* <div className="work-showmore">
-                <p>Show More</p>
-                <img src={arrow_icon} alt="" />
-            </div> */}
         </div>
     )
 }

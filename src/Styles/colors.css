@@ -1,0 +1,43 @@
+/* base colors */
+:root {
+    --primary-color: #d89c74;   /* Main brand color */
+    --secondary-color: #f6d9b2; /* Lighter accent color */
+    --neutral-color: #f2f2f2;   /* Light background or neutral color */
+    --neutral-color-transparent: rgba(216,156,116,0.7); /* rgba(242, 242, 242, 0.7); */
+    --background-color: #4a4a4a; /* Darker background color for contrast */
+    --text-color: white;         /* Default text color */
+    --heading-color: black;      /* Heading text color */
+}
+
+/* shades + variations */
+:root {
+    --primary-light: #e6b97a;   /* Lighter shade of primary */
+    --primary-dark: #a16843;    /* Darker shade of primary */
+    --secondary-light: #f7e0b4;  /* Lighter shade of secondary */
+    --secondary-dark: #c0a973;   /* Darker shade of secondary */
+}
+
+/* semantic colors - alerts/statuses */
+:root {
+    --success-color: #2ecc71;   /* Success messages */
+    --error-color: #e74c3c;     /* Error messages */
+    --warning-color: #f39c12;   /* Warnings */
+    --info-color: #3498db;      /* Informational messages */
+}
+
+/* functional colors - buttons/links/borders */
+:root {
+    --button-bg: #d89c74;       /* Button background */
+    --button-text: white;        /* Button text color */
+    --link-color: #d89c74;      /* Links */
+    --border-color: #bdc3c7;     /* Border color for divs, inputs */
+    --input-bg: white;           /* Input background */
+}
+
+/* shades + variations */
+:root {
+    --primary-light: #e6b97a;   /* Lighter shade of primary */
+    --primary-dark: #a16843;    /* Darker shade of primary */
+    --secondary-light: #f7e0b4;  /* Lighter shade of secondary */
+    --secondary-dark: #c0a973;   /* Darker shade of secondary */
+}
