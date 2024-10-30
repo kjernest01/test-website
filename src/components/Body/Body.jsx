@@ -1,4 +1,4 @@
-import React, {useRef} from "react"
+import React, { useRef, useEffect } from "react"
 import "./Body.css"
 // import Hero from "../Hero/Hero"
 import Navbar from "../Navbar/Navbar"
@@ -6,36 +6,6 @@ import About from "../About/About"
 import Work from "../Work/Work"
 import Projects from "../Projects/Projects"
 import Education from "../Education/Education"
-import Contact from "../Contact/Contact"
-import Footer from "../Footer/Footer"
-
-// const Body = () => {
-//     return (
-//         <div className="app-container">
-//             <div className="body-container">
-//                 <div className="body-navigator">
-//                     <Navbar />
-//                 </div>
-
-//                 <div className="body-content">
-//                     <About />
-//                     <Work />
-//                     <Projects />
-//                     <Education />
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Body
-
-// import React, { useRef } from 'react';
-// import Navbar from './Navbar';
-// import About from './About/About';
-// import Work from './Work';
-// import Projects from './Projects';
-// import Education from './Education';
 
 const AppContainer = () => {
     // Create refs for each section
@@ -48,6 +18,27 @@ const AppContainer = () => {
     const scrollToSection = (ref) => {
         ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
+
+    useEffect(() => {
+        // Intersection Observer for fade-in animation
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("section-visible");
+                    }
+                });
+            },
+            { threshold: 0.1 } // Trigger when 10% of the section is visible
+        );
+
+        // Observe each section
+        const sections = [aboutRef, workRef, projectsRef, educationRef];
+        sections.forEach((sectionRef) => observer.observe(sectionRef.current));
+
+        // Cleanup observer on component unmount
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <div className="app-container" id="container">

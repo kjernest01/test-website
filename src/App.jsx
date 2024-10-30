@@ -8,6 +8,7 @@ const App = () => {
   return (
     <div>
       <Hero />
+      {/* <Curtain /> */}
       <Body />
       <Contact />
       <Footer />

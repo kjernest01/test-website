@@ -3,8 +3,21 @@
     display: flex;
     align-items: center;
     gap: 35px;
+    /* animation: fadeIn 1s ease-in forwards; */
     /* background-color: aqua; */
 }
+
+/* @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
 
 .anchor-link {
     text-decoration: none;
@@ -22,6 +35,21 @@
     font-weight: 600;
     text-align: center;
     white-space: nowrap;
+
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(20) 1s forwards;
+    border-right: 2px solid var(--background-color);
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 /* Hero Image */
@@ -39,7 +67,8 @@
     margin-bottom: 50px;
 }
 
-.hero-connect, .hero-resume {
+.hero-connect,
+.hero-resume {
     padding: 25px 45px;
     border-radius: 50px;
     cursor: pointer;
@@ -51,6 +80,7 @@
     border: 2px solid var(--primary-color);
     background-color: var(--primary-color);
     color: white;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .hero-resume {
@@ -75,6 +105,12 @@
     border-color: var(--secondary-color);
 }
 
+.hero-connect:hover,
+.hero-resume:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
 /* Scroll Arrow and Text */
 .hero-scroll {
     display: flex;
@@ -87,6 +123,20 @@
     margin-top: 5px;
     cursor: pointer;
     transition: opacity 0.3s;
+
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 .hero-scroll p {
@@ -108,6 +158,92 @@
 
 /* Bounce Animation for Arrow */
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(8px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+/* Add this at the bottom of Hero.css */
+
+/* Mobile Styles */
+/* Mobile Styles */
+@media (min-width: 768px) and (max-width: 1261px) {
+    .hero {
+        /* background-color: aqua; */
+        display: flex;
+        flex-direction: row;
+        /* Stacking elements vertically */
+        align-items: center;
+        /* Centering horizontally */
+        justify-content: center;
+        /* Centering vertically */
+        text-align: center;
+        /* padding: 20%; */
+        /* height: 100vh; */
+        /* Ensure the hero takes full viewport height */
+        text-align: center;
+        /* Center text */
+    }
+
+    .hero-action {
+        display: flex;
+        /* Use flex to align items */
+        flex-direction: column;
+        /* Stack buttons vertically */
+        align-items: center;
+        /* Center buttons */
+        justify-content: center;
+        gap: 15px;
+        /* Add spacing between buttons */
+        margin-bottom: 30px;
+        /* Adjust margin for spacing */
+    }
+
+    .hero h1 {
+        /* padding-top: 90px; */
+        font-size: 60px;
+        /* Adjust heading size */
+        /* margin-bottom: 20px; */
+        /* Add space below the heading */
+    }
+
+    .hero-img {
+        
+        z-index: -1;
+        height: auto;
+        max-width: 50vh;
+        /* Adjust image height */
+        display: flex;
+        justify-content: center;
+        /* Center image */
+        align-items: center;
+        /* Center image */
+        margin-bottom: 20px;
+        /* Add space below image */
+    }
+
+    .hero-scroll {
+        display: none;
+        /* margin-bottom: 50px; */
+        /* Maintain bottom margin */
+    }
+
+    .hero-scroll p {
+        font-size: 20px;
+        /* Adjust font size */
+    }
+
+    .hero-scroll img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        /* width: 25px; */
+        /* Adjust arrow size */
+    }
 }

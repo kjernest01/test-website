@@ -39,20 +39,25 @@
 }
 
 .nav-menu li p {
+    text-wrap: nowrap;
     cursor: pointer;
+    padding: 12px 20px;
     color: var(--text-color);
     transition: color 0.3s ease;
+    border-radius: 40px 30px;
+    width: 100%;
 }
 
 /* Active Link */
 .nav-menu li .active {
     color: var(--background-color);
+    background-color: var(--button-bg);
     font-weight: bold;
 }
 
 /* Hover Effect */
 .nav-menu li p:hover {
-    color: var(--secondary-dark);
+    color: var(--background-color);
 }
 
 /* Mobile Menu Icon */
@@ -75,5 +80,5 @@
 }
 
 .nav-connect:hover {
-    background-color: var(--primary-dark);
+    background-color: var(--button-bg);
 }
