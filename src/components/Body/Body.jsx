@@ -42,11 +42,19 @@ const AppContainer = () => {
 
     return (
         <div className="app-container" id="container">
+
+            <div className="body-container-mobile">
+                <Navbar scrollToSection={scrollToSection} refs={{ aboutRef, workRef, projectsRef, educationRef }} />
+                <About />
+                <Work />
+                <Projects />
+                <Education />
+            </div>
             <div className="body-container">
+
                 <div className="body-navigator">
                     <Navbar scrollToSection={scrollToSection} refs={{ aboutRef, workRef, projectsRef, educationRef }} />
                 </div>
-
                 <div className="body-content">
                     <section ref={aboutRef}>
                         <About />

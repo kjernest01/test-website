@@ -9,6 +9,16 @@ import menu_close from '../../assets/menu_close.svg';
 
 const Navbar = ({ scrollToSection, refs }) => {
 
+    const [selectedItem, setSelectedItem] = useState(null);
+
+    const handleItemClick = (item) => {
+        setSelectedItem(item);
+
+        setTimeout(() => {
+            setSelectedItem(null);
+        }, 500);
+    };
+
     // JavaScript to toggle the navbar position
     // window.addEventListener('scroll', () => {
     //     const navbar = document.querySelector('.navbar');
@@ -34,9 +44,25 @@ const Navbar = ({ scrollToSection, refs }) => {
 
     return (
         <div className="navbar">
+            <div className="navbar-mobile" id="mobile-show">
+                <ul>
+                    {['About Me', 'Work', 'Projects', 'Education', 'Connect'].map((item, index) => (
+                        <li
+                            key={index}
+                            onClick={() => handleItemClick(item)}
+                            style={{
+                                backgroundColor: selectedItem === item ? 'var(--button-bg)' : 'transparent',
+                                color: selectedItem === item ? 'white' : 'inherit'
+                            }}
+                        >
+                            {item}
+                        </li>
+                    ))}
+                </ul>
+            </div>
             <h1 href='#home'>Vikram</h1>
             {/* <img src={logo} alt="logo" /> */}
-            <img src={menu_open} alt="logo" className="nav-mob-open" />
+            {/* <img src={menu_open} alt="logo" className="nav-mob-open" /> */}
             <ul ref={menuReference} className="nav-menu">
                 {/* <img src={menu_close} onClick={closeMenu} alt="" className="nav-mob-close" /> */}
                 {/* <li><AnchorLink className="anchor-link" offset={50} href='#home'><p onClick={() => setMenu('home')} className={menu === 'home' ? 'active' : ''}>Home</p></AnchorLink></li> */}

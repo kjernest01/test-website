@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px; /* Set width for vertical alignment */
+    width: 150px;
+    /* Set width for vertical alignment */
     padding: 20px;
     /* background-color: var(--neutral-color-transparent); */
     /* border-radius: 90px 60px; */
@@ -62,7 +63,8 @@
 
 /* Mobile Menu Icon */
 .nav-mob-open {
-    display: none; /* Hide on desktop */
+    display: none;
+    /* Hide on desktop */
 }
 
 /* Connect Button Styling */
@@ -81,4 +83,65 @@
 
 .nav-connect:hover {
     background-color: var(--button-bg);
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+@media (max-width: 860px) {
+    .navbar {
+        display: none;
+        background-color: var(--primary-dark);
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        vertical-align: baseline;
+
+        border-radius: 30px 30px 10px 10px ;
+    }
+
+    .navbar-mobile {
+        display: flex;
+    }
+
+    .navbar-mobile ul li {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        text-wrap: nowrap;
+        /* margin-top: 20px; */
+        padding: 12px 20px;
+        color: var(--button-text);
+        /* background-color: var(--button-bg); */
+        border-radius: 30px 30px 10px 10px;
+        /* font-size: 16px; */
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.3s;
+
+        font-size: 20px;
+    }
+
+
+
+    .navbar-mobile ul {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .nav-menu,
+    .navbar h1,
+    .navbar .anchor-link {
+        display: none;
+    }
+
+
+    .navbar,
+    .nav-menu {
+        flex-direction: row;
+    }
 }

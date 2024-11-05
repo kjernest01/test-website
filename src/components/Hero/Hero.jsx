@@ -3,10 +3,12 @@ import './Hero.css';
 import profile_img from '../../assets/transparent_vikram.png';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import downarrow_img from '../../assets/down-arrow.png';
+import { Helmet } from "react-helmet";
 
 const Hero = () => {
     return (
         <div id='home' className="hero">
+            <Helmet><meta name="viewport" content="width=device-width, initial-scale=1.0" /></Helmet>
             <div className="divider">
                 <div className="hero-information">
                     <h1>Vikram Ratan</h1>
@@ -18,10 +20,10 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="hero-scroll" href="#container">
+                {/* <div className="hero-scroll" href="#container">
                     <p>Scroll for more</p>
                     <img src={downarrow_img} alt="" />
-                </div>
+                </div> */}
             </div>
 
             <div className="hero-img">

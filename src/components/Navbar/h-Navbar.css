@@ -1,7 +1,7 @@
 @import url(../../Styles/root.css);
 
 /* Navbar container */
-.navbar { 
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,8 +18,10 @@
 }
 
 .scrolled {
-    position: absolute; /* Change to absolute when scrolled */
-    background-color: rgba(255, 255, 255, 0.95); /* Optional: Change background on scroll */
+    position: absolute;
+    /* Change to absolute when scrolled */
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Optional: Change background on scroll */
 }
 
 .anchor-link {
@@ -31,7 +33,8 @@
 .navbar h1 {
     font-size: 24px;
     font-weight: bold;
-    color: #333; /* Dark text color */
+    color: #333;
+    /* Dark text color */
     cursor: pointer;
     margin: 0;
 }
@@ -39,7 +42,8 @@
 /* Mobile menu icons */
 .nav-mob-open,
 .nav-mob-close {
-    display: none; /* Hidden on desktop */
+    display: none;
+    /* Hidden on desktop */
     cursor: pointer;
 }
 
@@ -70,7 +74,8 @@
 }
 
 .anchor-link p:hover {
-    color: #d89c74; /* Matches primary theme color */
+    color: #d89c74;
+    /* Matches primary theme color */
 }
 
 /* Active link styling */
@@ -95,156 +100,3 @@
     background-color: #d89c74;
     color: white;
 }
-
-
-/* .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    margin: 10px 0px;
-    padding: 10px 20px;
-
-    width: 100%;
-
-    border-radius: 10px;
-    gap: 40px;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 40px;
-} */
-
-/* .nav-connect {
-    background: linear-gradient(to right, #ff00ff, #ff9900);
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    white-space: nowrap;
-} */
-
-/* .nav-connect:hover {
-    transform: scale(1.05);
-} */
-
-/* .navbar {
-
-    background-color: var(--primary-color);
-
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-
-    margin: 10px 0px;
-    padding: 0px 40px;
-
-    display: flex;
-    gap: 60px;
-
-}
-
-.navbar h1 {
-
-    font-size: 45px;
-    cursor: pointer;
-
-}
-
-.nav-menu {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    list-style: none;
-    gap: 60px;
-    
-    font-size: 20px;
-}
-
-.nav-connect {
-    justify-content: center;
-    border-radius: 50px;
-    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.nav-connect:hover {
-    transform: scale(1.05);
-} */
-
-/* .nav-menu li {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.nav-menu li img {
-    display: flex;
-    margin: auto;
-}
-
-.anchor-link {
-    text-decoration: none;
-    color: white;
-    transition: 0.5s;
-}
-
-.anchor-link:hover {
-    transform: scale(1.5);
-}
-
-.nav-mob-close,
-.nav-mob-open {
-    display: none;
-} */
-
-/* @media(max-width:768px) {
-    .navbar {
-        margin: 20px 50px;
-    }
-
-    .nav-connect {
-        display: none;
-    }
-
-    .nav-mob-open {
-        display: block;
-        position: fixed;
-        right: 30px;
-    }
-
-    .nav-mob-close {
-        display: block;
-        position: relative;
-        top: 30px;
-        left: 290px;
-        width: 30px;
-    }
-
-    .nav-menu {
-        position: fixed;
-        flex-direction: column;
-        align-items: start;
-        top: 0;
-        gap: 30px;
-        background-color: #1F0016;
-        width: 350px;
-        height: 100%;
-        z-index: 2;
-        transform: right 0.5s;
-        right: -350px;
-    }
-
-    .nav-menu li {
-        font-size: 30px;
-        padding-left: 100px;
-        flex-direction: row;
-        gap: 20px;
-    }
-} */

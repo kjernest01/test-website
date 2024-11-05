@@ -1,8 +1,8 @@
 @import url(./Styles/root.css);
 
 * {
-    margin: 0;
-    padding: 0;
+    /* margin: 0; */
+    /* padding: 0; */
     box-sizing: border-box;
 }
 
@@ -18,44 +18,7 @@ body {
     position: sticky;
 
     color: var(--text-color);
+    /* gap: 0px; */
+
+    width: 100vw;
 }
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
-        /* Stacks items vertically on smaller screens */
-        padding: 10px;
-        /* Add some padding for small screens */
-    }
-
-    /* Example adjustments for specific components */
-    .hero {
-        width: 100%;
-        /* Full width on mobile */
-        text-align: center;
-        /* Center text for better readability */
-    }
-
-    .body,
-    .contact,
-    .footer {
-        width: 100%;
-        /* Full width */
-        padding: 20px;
-        /* Add padding */
-    }
-
-    /* Adjust font sizes for better readability */
-    h1 {
-        font-size: 1.5em;
-        /* Adjust heading size */
-    }
-
-    p {
-        font-size: 1em;
-        /* Adjust paragraph size */
-    }
-}
-
-/* Additional breakpoints */

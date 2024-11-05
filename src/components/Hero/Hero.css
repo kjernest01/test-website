@@ -1,23 +1,15 @@
 /* Hero Section Layout */
 .hero {
+    /* back */
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 35px;
     /* animation: fadeIn 1s ease-in forwards; */
     /* background-color: aqua; */
+    width: 100%;
+    /* background-color: aqua; */
 }
-
-/* @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
 
 .anchor-link {
     text-decoration: none;
@@ -31,10 +23,12 @@
 }
 
 .hero h1 {
-    font-size: 90px;
+    font-size: 60px;
     font-weight: 600;
     text-align: center;
     white-space: nowrap;
+
+    margin: 5px;
 
     overflow: hidden;
     white-space: nowrap;
@@ -54,22 +48,26 @@
 
 /* Hero Image */
 .hero-img img {
-    height: 100vh;
+    margin-bottom: 0px;
+    height: 50vh;
     object-fit: cover;
+
 }
 
 /* Action Buttons */
 .hero-action {
     display: flex;
+    /* flex-direction: column; */
     gap: 25px;
     font-size: 24px;
     font-weight: 500;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 
 .hero-connect,
 .hero-resume {
-    padding: 25px 45px;
+    width: 250px;
+    padding: 20px 20px;
     border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
@@ -84,7 +82,8 @@
 }
 
 .hero-resume {
-    padding: 25px 75px;
+
+    padding: 20px 20px 20px 0px;
     border: 2px solid #fff;
     color: var(--neutral-color);
     background-color: transparent;
@@ -169,81 +168,40 @@
     }
 }
 
-/* Add this at the bottom of Hero.css */
+@media (max-width: 860px) {
 
-/* Mobile Styles */
-/* Mobile Styles */
-@media (min-width: 768px) and (max-width: 1261px) {
     .hero {
-        /* background-color: aqua; */
-        display: flex;
-        flex-direction: row;
-        /* Stacking elements vertically */
-        align-items: center;
-        /* Centering horizontally */
-        justify-content: center;
-        /* Centering vertically */
-        text-align: center;
-        /* padding: 20%; */
-        /* height: 100vh; */
-        /* Ensure the hero takes full viewport height */
-        text-align: center;
-        /* Center text */
+        padding: 0;
+        align-self: center;
+        /* margin: 0px 10%; */
+        /* margin-right: auto; */
+        /* margin: 0 auto; */
+
+        width: 100%;
+        /* Full width of the screen */
+        /* max-width: 100vw; */
+        /* Prevent overflow beyond viewport width */
+        /* padding: 10px; */
+
+        flex-direction: column-reverse;
+        gap: 0px;
     }
 
     .hero-action {
-        display: flex;
-        /* Use flex to align items */
         flex-direction: column;
-        /* Stack buttons vertically */
+        gap: 8px;
+        width: max-content;
         align-items: center;
-        /* Center buttons */
-        justify-content: center;
-        gap: 15px;
-        /* Add spacing between buttons */
-        margin-bottom: 30px;
-        /* Adjust margin for spacing */
+    }
+
+    .hero-connect,
+    .hero-resume {
+        /* padding: 5px 20px; */
+        /* width: 150px; */
+        font-size: calc(1vw + 1rem);
     }
 
     .hero h1 {
-        /* padding-top: 90px; */
-        font-size: 60px;
-        /* Adjust heading size */
-        /* margin-bottom: 20px; */
-        /* Add space below the heading */
-    }
-
-    .hero-img {
-        
-        z-index: -1;
-        height: auto;
-        max-width: 50vh;
-        /* Adjust image height */
-        display: flex;
-        justify-content: center;
-        /* Center image */
-        align-items: center;
-        /* Center image */
-        margin-bottom: 20px;
-        /* Add space below image */
-    }
-
-    .hero-scroll {
-        display: none;
-        /* margin-bottom: 50px; */
-        /* Maintain bottom margin */
-    }
-
-    .hero-scroll p {
-        font-size: 20px;
-        /* Adjust font size */
-    }
-
-    .hero-scroll img {
-        height: 100%;
-        width: auto;
-        object-fit: contain;
-        /* width: 25px; */
-        /* Adjust arrow size */
+        font-size: clamp(2rem, 2vw + 1rem, 5rem);
     }
 }
